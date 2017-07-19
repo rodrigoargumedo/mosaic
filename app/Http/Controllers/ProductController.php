@@ -14,7 +14,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        // GET /product
+        $products = Product::all();
+        return view('product.index', compact('products'));
     }
 
     /**
@@ -24,7 +26,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        // GET /product/new
+        $product = new Product;
+        return view('product.new', compact('product'));
     }
 
     /**
@@ -35,7 +39,9 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // POST /product
+        Product::create(['title', 'description', 'price']);
+        return redirect('/product');
     }
 
     /**
@@ -46,7 +52,9 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        // GET /product/{product}
+        $product = Product::find($product);
+        return view('product.show', compact('product'));
     }
 
     /**
@@ -57,7 +65,10 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        // GET /product/{product}/edit
+        $product = Product::find($product);
+        
+        return view('product.edit', compact('product'));
     }
 
     /**
@@ -69,7 +80,15 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        // PUT/PATCH /product
+        $product = Product::find($product);
+        
+        $product->name = request('name');
+        $product->description = request('description');
+        $product->price = request('price');
+        $product->save();
+        
+        return redirect('product.show', compact('product'));
     }
 
     /**
@@ -80,6 +99,9 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        // DELETE /product/{product}
+        $product = Product::find($product);
+        $product->delete();
+        return redirect()->route('product.index');
     }
 }
