@@ -2,8 +2,8 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-8 py-4">
-        <h4 class="text-white">About</h4>
-        <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+        <h4 class="text-white">About MOSAIC Program</h4>
+        <p class="text-muted">Thank you for visiting the MOSAIC web page. MOSAIC is a special education program ran by Humble ISD. We support all students age 18 to 22 who receive special education as they transition from school life to adult life. We are not your typical school program so we need all the community and family support we can get!</p>
       </div>
       <div class="col-sm-4 py-4">
         <h4 class="text-white">Contact</h4>
