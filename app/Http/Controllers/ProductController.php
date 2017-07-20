@@ -16,8 +16,7 @@ class ProductController extends Controller
     {
         // GET /product
         $products = Product::all();
-        $new_product = Product::find($products)->latest()->get();
-        return view('product.index', compact('products', 'new_product'));
+        return view('product.index', compact('products'));
     }
 
     /**
