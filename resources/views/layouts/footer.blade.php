@@ -5,8 +5,8 @@
     <p class="float-right">
       <a href="#">Back to top</a>
     </p>
-    <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+    <p>MOSAIC Transition Program is part of the <a href="http://humbleisd.net">Humble Independent School District.</a><br>Products listed here are made by special education students in house at <a href="http://humbleisd.net/cs">Cambridge School</a> and <a href="humbleisd.net/clc"> Community Learning Center</a>. </p>
+    <p>Made with &hearts; <a href="http://rodrigoargumedo.me">by Rodrigo Argumedo</a>, our MOSAIC student developer.</p>
   </div>
 </footer>
 
