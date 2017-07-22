@@ -19,7 +19,7 @@ jobs:
           paths:
             - vendor
       - run: export DB_CONNECTION=sqlite
-      - run: touch database/testing.sqlite
-      - run: php artisan migrate --env=testing --database=testing --force
+      - run: touch database/database.sqlite
+      - run: php artisan migrate --database="sqlite" --force
       - run: ./vendor/bin/codecept build
       - run: ./vendor/bin/codecept run
