@@ -24,20 +24,32 @@
       
         <div class="row">
           @foreach($products as $product)
-          <div class="col-sm-3">
+          <div class="col col-sm-4">
+            <div class="form-group">
             
-            <div class="card text-center">
-              <div class="card-block">
-                <h4 class="card-title">{{ $product->name }}</h4>
-                <h6 class="card-subtitle mb-2 text-muted">${{ $product->price}}</h6>
-                <p class="card-text">{{ $product->description }}</p>
+              <div class="card text-center">
+                <div class="card-block">
+                  <h4 class="card-title">{{ $product->name }}</h4>
+                  <h6 class="card-subtitle mb-2 text-muted">${{ $product->price }}</h6>
+                  <p class="card-text">{{ $product->description }}</p>
+                  @if($product->created_at == $product->updated_at)
+                  <p class="card-text">Added {{ $product->created_at->diffForHumans() }}</p>
+                  @else
+                  <p class="card-text">Updated {{ $product->updated_at->diffForHumans() }}</p>
+                  @endif
+                  <a href="/product/{{$product->id}}" class="btn btn-primary">Learn more</a>
+                </div>
               </div>
+            
             </div>
           </div>
           @endforeach
         </div>
         @else
-        <h3>We don't have anything for you to offer at the moment.</h3>
+        <br>
+        <h3 class="text-center">We don't have anything for you to offer at the moment.</h3>
+        <p class="text-center">Please check back later.</p>
+        <br>
         @endif
       </div>
     </div>
